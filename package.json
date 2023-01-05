@@ -1,0 +1,21 @@
+{
+  "name": "js_dsa",
+  "version": "1.0.0",
+  "description": "code examples of data structures and algorithms in javascript",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "keywords": [
+    "javascript",
+    "data",
+    "structures",
+    "algorithms",
+    "dsa"
+  ],
+  "author": "cur10sDEV",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
