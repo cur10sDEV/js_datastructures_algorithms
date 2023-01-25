@@ -3,6 +3,16 @@ const arr = [56, 45, 88, 2, 6, 99, 23, 19];
 function bubbleSort(arr) {
 	// noswaps for optimization
 	let noSwaps;
+
+	// swap function
+	const swap = (arr, i, j) => {
+		// temp = arr[i];
+		// arr[i] = arr[i + 1];
+		// arr[i + 1] = temp;
+		// or
+		[arr[i], arr[j]] = [arr[j], arr[i]];
+	};
+
 	for (let i = arr.length; i > 0; i--) {
 		noSwaps = true;
 		for (let j = 0; j < i - 1; j++) {
@@ -15,15 +25,6 @@ function bubbleSort(arr) {
 		if (noSwaps) break;
 	}
 	return arr;
-}
-
-// swap function
-function swap(arr, i, j) {
-	// temp = arr[i];
-	// arr[i] = arr[i + 1];
-	// arr[i + 1] = temp;
-	// or
-	[arr[i], arr[j]] = [arr[j], arr[i]];
 }
 
 console.log(bubbleSort(arr));
