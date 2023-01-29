@@ -18,10 +18,18 @@ function insertionSort(arr) {
 
 console.log(insertionSort(arr));
 
+// =================================
 // Big O
+
+// Time Complexity
 // Best Case - O(n)
 // Average Case - O(n**2)
 // Worst Case - O(n**2)
 
+// Space Complexity
+// O(1)
+
 // note
 // insertion sort works very well if you need your data to be continously sorted that is new elements are being added to maintain a running sort
+
+// =================================
