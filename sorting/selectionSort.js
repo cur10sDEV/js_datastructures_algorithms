@@ -1,22 +1,24 @@
-const arr = [24, 76, 14, 9, 65, -3];
+const arr = [56, 45, 88, 2, 6, 99, 23, 19];
 
-function insertionSort(arr) {
-	const swap = (arr, i, j) => {
-		[arr[i], arr[j]] = [arr[j], arr[i]];
-	};
-	for (let i = 1; i < arr.length; i++) {
-		let j = i;
-		if (arr[j] < arr[j - 1]) {
-			while (arr[j] < arr[j - 1]) {
-				swap(arr, j, j - 1);
-				j--;
-			}
-		}
-	}
-	return arr;
+function selectionSort(arr) {
+  for (let i = 0; i < arr.length - 1; i++) {
+    // min-index
+    let min = i;
+
+    for (let j = i + 1; j < arr.length; j++) {
+      // if current element is lower than the minimum
+      if (arr[j] < arr[min]) {
+        min = j;
+      }
+    }
+
+    // swap only if there is new min element
+    if (min !== i) [arr[i], arr[min]] = [arr[min], arr[i]];
+  }
+  return arr;
 }
 
-console.log(insertionSort(arr));
+console.log(selectionSort(arr));
 
 // =================================
 // Big O

@@ -1,20 +1,35 @@
 const arr = [24, 76, 14, 9, 65, -3];
 
 function insertionSort(arr) {
-	const swap = (arr, i, j) => {
-		[arr[i], arr[j]] = [arr[j], arr[i]];
-	};
-	for (let i = 1; i < arr.length; i++) {
-		let j = i;
-		if (arr[j] < arr[j - 1]) {
-			while (arr[j] < arr[j - 1]) {
-				swap(arr, j, j - 1);
-				j--;
-			}
-		}
-	}
-	return arr;
+  const swap = (arr, i, j) => {
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  };
+  for (let i = 1; i < arr.length; i++) {
+    let j = i;
+    if (arr[j] < arr[j - 1]) {
+      while (arr[j] < arr[j - 1]) {
+        swap(arr, j, j - 1);
+        j--;
+      }
+    }
+  }
+  return arr;
 }
+
+// or
+
+// function insertionSort(arr) {
+//   for (let i = 1; i < arr.length; i++) {
+//     let currentNum = i;
+//     for (let j = i - 1; j >= 0; j--) {
+//       if (arr[currentNum] < arr[j]) {
+//         [arr[currentNum], arr[j]] = [arr[j], arr[currentNum]];
+//         currentNum--;
+//       }
+//     }
+//   }
+//   return arr;
+// }
 
 console.log(insertionSort(arr));
 
