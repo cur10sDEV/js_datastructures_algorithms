@@ -64,8 +64,6 @@ function radixSort(arr) {
 
 console.log(radixSort(arr));
 
-// my flaws are what wake me up in the morning and all night
-
 // Note:- can only be used with numerical data
 
 // =================================
